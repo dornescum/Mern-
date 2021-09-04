@@ -1,7 +1,7 @@
- import mongoose from "mongoose";
- import {stringify} from "nodemon/lib/utils";
+import mongoose from "mongoose";
+// import {stringify} from "nodemon/lib/utils";
 
-const postSchema =mongoose.Schema({
+const postSchema = mongoose.Schema({
 	title: String,
 	message: String,
 	creator: String,
@@ -16,6 +16,5 @@ const postSchema =mongoose.Schema({
 		default: new Date()
 	}
 })
-
- const PostMessage = mongoose.model('PostMessage', postSchema);
+const PostMessage = mongoose.model('PostMessage', postSchema);
 export default PostMessage;
